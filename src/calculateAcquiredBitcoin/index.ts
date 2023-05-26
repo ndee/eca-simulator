@@ -1,4 +1,4 @@
-import { IEcaPurchase, IEcaResult } from "./interfaces";
+import { IEcaPurchase, IEcaResult } from "../interfaces";
 
 export async function calculateAcquiredBitcoin(
   ecaPurchase: IEcaPurchase

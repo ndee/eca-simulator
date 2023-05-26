@@ -1,5 +1,5 @@
-import { buildPurchaseRequestList } from "../src/buildPurchaseRequestList";
-import { PurchaseRepeat } from "../src/interfaces";
+import { buildPurchaseRequestList } from "../../src/calculateAcquiredBitcoin/buildPurchaseRequestList";
+import { PurchaseRepeat } from "../../src/interfaces";
 
 describe("buildPurchaseRequestList", () => {
   it("should fail when start date is after end date", () => {

@@ -1,5 +1,5 @@
+import { IBuildPurchaseParams, IPurchase } from "../interfaces";
 import { calculateSatsFromEur } from "./calculateSatsFromEur";
-import { IBuildPurchaseParams, IPurchase } from "./interfaces";
 
 export async function buildPurchaseList(
   params: IBuildPurchaseParams

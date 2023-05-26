@@ -1,4 +1,4 @@
-import { calculateSatsFromEur } from "../src/calculateSatsFromEur";
+import { calculateSatsFromEur } from "../../src/calculateAcquiredBitcoin/calculateSatsFromEur";
 
 describe("calculateSatsFromEur", () => {
   describe("should calculate it right for", () => {
