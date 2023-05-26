@@ -1,1 +1,7 @@
 node_modules
+
+# Distribution directories
+dist/
+_dist/
+# TypeScript build info
+*.tsbuildinfo

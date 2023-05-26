@@ -1,5 +1,7 @@
-export function calculateAcquiredBitcoin() {
+import { IEcaPurchase, IEcaResult } from "./interfaces";
 
-
-    const bla = 0;
+export async function calculateAcquiredBitcoin(
+  ecaPurchase: IEcaPurchase
+): Promise<IEcaResult> {
+  return {} as IEcaResult;
 }
