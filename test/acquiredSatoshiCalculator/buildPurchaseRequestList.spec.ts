@@ -1,4 +1,4 @@
-import { buildPurchaseRequestList } from "../../src/calculateAcquiredBitcoin/buildPurchaseRequestList";
+import { buildPurchaseRequestList } from "../../src/acquiredSatoshiCalculator/buildPurchaseRequestList";
 import { PurchaseRepeat } from "../../src/interfaces";
 
 describe("buildPurchaseRequestList", () => {
