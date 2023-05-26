@@ -12,21 +12,23 @@ export function buildPurchaseRequestList(
   const requests: IPurchaseRequest[] = [];
   let purchaseMoment = moment(ecaPurchase.purchaseStart);
 
-  while (purchaseMoment.date() < ecaPurchase.purchaseEnd.getDate()) {
+  while (purchaseMoment.isBefore(moment(ecaPurchase.purchaseEnd))) {
+    let momentUnit: moment.unitOfTime.DurationConstructor;
     switch (ecaPurchase.purchaseRepeat) {
       case PurchaseRepeat.Yearly:
-        purchaseMoment.add(1, "year");
+        momentUnit = "year";
         break;
       case PurchaseRepeat.Monthly:
-        purchaseMoment.add(1, "month");
+        momentUnit = "month";
         break;
       case PurchaseRepeat.Weekly:
-        purchaseMoment.add(1, "week");
+        momentUnit = "week";
         break;
       case PurchaseRepeat.Daily:
-        purchaseMoment.add(1, "day");
+        momentUnit = "day";
         break;
     }
+    purchaseMoment.add(1, momentUnit);
     requests.push({
       amountInEur: ecaPurchase.purchaseAmountInEur,
       date: purchaseMoment.toDate(),
