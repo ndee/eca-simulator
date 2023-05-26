@@ -20,3 +20,16 @@ export interface IPurchaseRequest {
   amountInEur: number;
   date: Date;
 }
+
+export interface IPurchase extends IPurchaseRequest {
+  exchangeRateBtcUsd: number;
+  exchangeRateUsdEur: number;
+  acquiredSatoshis: number;
+  exchangeRateSource?: string;
+}
+
+export interface IBuildPurchaseParams {
+  requestList: IPurchaseRequest[];
+  getBtcUsdExchangeRate: (date: Date) => Promise<number>;
+  getUsdEurExchangeRate: (date: Date) => Promise<number>;
+}
