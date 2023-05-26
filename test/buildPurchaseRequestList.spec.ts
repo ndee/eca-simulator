@@ -2,6 +2,16 @@ import { buildPurchaseRequestList } from "../src/buildPurchaseRequestList";
 import { PurchaseRepeat } from "../src/interfaces";
 
 describe("buildPurchaseRequestList", () => {
+  it("should fail when start date is after end date", () => {
+    expect(() =>
+      buildPurchaseRequestList({
+        purchaseAmountInEur: 1000,
+        purchaseStart: new Date("2023-05-27"),
+        purchaseEnd: new Date("2023-05-26"),
+        purchaseRepeat: PurchaseRepeat.Yearly,
+      })
+    ).toThrow();
+  });
   describe("should calculate list for a", () => {
     it("yearly plan", () => {
       expect(
