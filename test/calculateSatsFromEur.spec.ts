@@ -9,7 +9,7 @@ describe("calculateSatsFromEur", () => {
       [24920.74, 26753.41, 0.93, 100161043],
       [100, 26706.73, 0.93, 402621],
     ])(
-      "amountInEur: %f,  exchangeRateBtcUsd: %f, exchangeRateUsdEur: %f, acquiredSatoshis: %f",
+      "amountInEur: %f,  btcUsdRate: %f, usdEurRate: %f, acquiredSatoshis: %f",
       (amountInEur, btcUsdRate, usdEurRate, acquiredSatoshis) => {
         expect(
           calculateSatsFromEur({

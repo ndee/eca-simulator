@@ -22,8 +22,8 @@ export interface IPurchaseRequest {
 }
 
 export interface IPurchase extends IPurchaseRequest {
-  exchangeRateBtcUsd: number;
-  exchangeRateUsdEur: number;
+  btcUsdRate: number;
+  usdEurRate: number;
   acquiredSatoshis: number;
   exchangeRateSource?: string;
 }

@@ -7,17 +7,17 @@ export async function buildPurchaseList(
   const purchases: IPurchase[] = [];
 
   for (let request of params.requestList) {
-    const exchangeRateBtcUsd = await params.getBtcUsdExchangeRate(request.date);
-    const exchangeRateUsdEur = await params.getUsdEurExchangeRate(request.date);
+    const btcUsdRate = await params.getBtcUsdExchangeRate(request.date);
+    const usdEurRate = await params.getUsdEurExchangeRate(request.date);
     purchases.push({
       date: request.date,
       amountInEur: request.amountInEur,
-      exchangeRateBtcUsd,
-      exchangeRateUsdEur,
+      btcUsdRate,
+      usdEurRate,
       acquiredSatoshis: calculateSatsFromEur({
         amountInEur: request.amountInEur,
-        btcUsdRate: exchangeRateBtcUsd,
-        exchangeRateUsdEur,
+        btcUsdRate,
+        usdEurRate,
       }),
     });
   }
