@@ -28,8 +28,10 @@ export interface IPurchase extends IPurchaseRequest {
   exchangeRateSource?: string;
 }
 
+export type ExchangeRateProvider = (date: Date) => Promise<number>;
+
 export interface IBuildPurchaseParams {
   requestList: IPurchaseRequest[];
-  getBtcUsdExchangeRate: (date: Date) => Promise<number>;
-  getUsdEurExchangeRate: (date: Date) => Promise<number>;
+  getBtcUsdExchangeRate: ExchangeRateProvider;
+  getUsdEurExchangeRate: ExchangeRateProvider;
 }

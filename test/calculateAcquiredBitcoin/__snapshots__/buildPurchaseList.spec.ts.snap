@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buildPurchaseList should run 1`] = `
+[
+  {
+    "acquiredSatoshis": 1000000,
+    "amountInEur": 100,
+    "btcUsdRate": 10000,
+    "date": 2020-01-01T00:00:00.000Z,
+    "usdEurRate": 1,
+  },
+  {
+    "acquiredSatoshis": 555556,
+    "amountInEur": 100,
+    "btcUsdRate": 20000,
+    "date": 2021-01-01T00:00:00.000Z,
+    "usdEurRate": 0.9,
+  },
+  {
+    "acquiredSatoshis": 416667,
+    "amountInEur": 100,
+    "btcUsdRate": 30000,
+    "date": 2022-01-01T00:00:00.000Z,
+    "usdEurRate": 0.8,
+  },
+  {
+    "acquiredSatoshis": 357143,
+    "amountInEur": 100,
+    "btcUsdRate": 40000,
+    "date": 2023-01-01T00:00:00.000Z,
+    "usdEurRate": 0.7,
+  },
+]
+`;
