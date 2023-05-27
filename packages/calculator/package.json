@@ -1,5 +1,5 @@
 {
-  "name": "@bitcoin-guides/eca-calculator",
+  "name": "@bg-eca-simulator/calculator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,7 @@
     "start": "ts-node src/index.ts",
     "build": "npm run clean && npm run compile",
     "clean": "rm -rf ./dist",
+    "clean:full": "rm -rf ./node_modules && npm run clean",
     "compile": "npm run compile:src",
     "compile:src": "tsc -b src",
     "compile:test": "tsc -p test --noEmit",

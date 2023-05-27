@@ -1,10 +1,12 @@
 {
-  "name": "@bitcoin-guides/eca-simulator",
+  "name": "@bg-eca-simulator/root",
   "version": "1.0.0",
   "description": "Run:",
   "main": "index.js",
   "scripts": {
     "build": "lerna run build",
+    "clean": "lerna run clean",
+    "clean:full": "lerna run clean:full && rm -rf ./node_modules",
     "test": "lerna run test"
   },
   "repository": {
