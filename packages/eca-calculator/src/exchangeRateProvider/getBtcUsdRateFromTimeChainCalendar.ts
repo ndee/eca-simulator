@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ExchangeRateProvider } from "src/interfaces";
+import { ExchangeRateProvider } from "../../src/interfaces";
 
 export const getBtcUsdRateFromTimeChainCalendar: ExchangeRateProvider = async (
   date: Date
