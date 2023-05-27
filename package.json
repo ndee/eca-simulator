@@ -1,0 +1,26 @@
+{
+  "name": "@bitcoin-guides/eca-simulator",
+  "version": "1.0.0",
+  "description": "Run:",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build",
+    "test": "lerna run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndee/eca-simulator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndee/eca-simulator/issues"
+  },
+  "homepage": "https://github.com/ndee/eca-simulator#readme",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.6.2"
+  }
+}
