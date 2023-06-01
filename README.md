@@ -6,8 +6,17 @@
 
 ## Getting started
 
+- Open a terminal and execute:
+
 ```bash
 $ git clone https://github.com/ndee/eca-simulator.git
+```
+
+- Open the cloned folder with VSCode
+- Install all recommended extensions (in case VSCode does not recommend them you find them in .vscode/extensions.json)
+- Open a terminal and execute:
+
+```bash
 $ npm install
 $ npm run build
 $ npm run start
