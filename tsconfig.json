@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@bg-eca-simulator/calculator": ["packages/calculator/src"],
+    }
+  }
+}

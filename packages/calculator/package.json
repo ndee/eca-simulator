@@ -2,7 +2,11 @@
   "name": "@bg-eca-simulator/calculator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "npm run clean && npm run compile",
