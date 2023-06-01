@@ -1,26 +1,33 @@
-import { IBuildPurchaseParams, IPurchase } from "../interfaces";
+import {
+  ExchangeRateType,
+  IBuildPurchaseParams,
+  IPurchase,
+} from "../interfaces";
 import { calculateSatsFromEur } from "./calculateSatsFromEur";
 
 export async function buildPurchaseList(
   params: IBuildPurchaseParams
 ): Promise<IPurchase[]> {
-  const purchases: IPurchase[] = [];
+  const btcUsdRates = await params.exchangeRateProvider(
+    params.requestList.map((r) => r.date),
+    ExchangeRateType.BtcToUsd
+  );
+  const usdEurRates = await params.exchangeRateProvider(
+    params.requestList.map((r) => r.date),
+    ExchangeRateType.UsdToEur
+  );
 
-  for (let request of params.requestList) {
-    const btcUsdRate = await params.getBtcUsdExchangeRate(request.date);
-    const usdEurRate = await params.getUsdEurExchangeRate(request.date);
-    purchases.push({
-      date: request.date,
+  const purchases: IPurchase[] = params.requestList.map((request, index) => ({
+    date: request.date,
+    amountInEur: request.amountInEur,
+    btcUsdRate: btcUsdRates[index],
+    usdEurRate: usdEurRates[index],
+    acquiredSatoshis: calculateSatsFromEur({
       amountInEur: request.amountInEur,
-      btcUsdRate,
-      usdEurRate,
-      acquiredSatoshis: calculateSatsFromEur({
-        amountInEur: request.amountInEur,
-        btcUsdRate,
-        usdEurRate,
-      }),
-    });
-  }
+      btcUsdRate: btcUsdRates[index],
+      usdEurRate: usdEurRates[index],
+    }),
+  }));
 
   return purchases;
 }
