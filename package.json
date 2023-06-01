@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "lerna run build",
+    "start": "lerna run start --scope @bg-eca-simulator/service",
     "clean": "lerna run clean",
     "clean:full": "lerna run clean:full && rm -rf ./node_modules",
     "test": "lerna run test"
