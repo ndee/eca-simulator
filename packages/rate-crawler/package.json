@@ -1,0 +1,22 @@
+{
+  "name": "@bg-eca-simulator/rate-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./dist",
+    "clean:full": "rm -rf ./node_modules && npm run clean",
+    "compile": "npm run compile:src",
+    "compile:src": "tsc -b src",
+    "compile:test": "tsc -p test --noEmit",
+    "test": "jest ./test"
+  },
+  "author": "",
+  "license": "ISC"
+}

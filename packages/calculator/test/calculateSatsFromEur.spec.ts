@@ -1,4 +1,4 @@
-import { calculateSatsFromEur } from "../../src/acquiredSatoshiCalculator/calculateSatsFromEur";
+import { calculateSatsFromEur } from "../src/calculateSatsFromEur";
 
 describe("calculateSatsFromEur", () => {
   describe("should calculate it right for", () => {

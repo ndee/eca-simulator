@@ -1,9 +1,6 @@
 import axios from "axios";
-import { ExchangeRateProvider } from "../interfaces";
 
-export const getBtcUsdRateFromTimeChainCalendar: ExchangeRateProvider = async (
-  date: Date
-) => {
+export const getBtcUsdRateFromTimeChainCalendar = async (date: Date) => {
   const timestamp = date.getTime();
   const blocksAroundTimestampResponse = await axios.get(
     `https://corsproxy.io/?https%3A%2F%2Fblockchain.info%2Fblocks%2F${timestamp}%3Fformat%3Djson`

@@ -3,32 +3,32 @@
 exports[`buildPurchaseList should run 1`] = `
 [
   {
-    "acquiredSatoshis": 1000000,
+    "acquiredSatoshis": 10000000000,
     "amountInEur": 100,
-    "btcUsdRate": 10000,
+    "btcUsdRate": 1,
     "date": 2020-01-01T00:00:00.000Z,
     "usdEurRate": 1,
   },
   {
-    "acquiredSatoshis": 555556,
+    "acquiredSatoshis": 2500000000,
     "amountInEur": 100,
-    "btcUsdRate": 20000,
+    "btcUsdRate": 2,
     "date": 2021-01-01T00:00:00.000Z,
-    "usdEurRate": 0.9,
+    "usdEurRate": 2,
   },
   {
-    "acquiredSatoshis": 416667,
+    "acquiredSatoshis": 1111111111,
     "amountInEur": 100,
-    "btcUsdRate": 30000,
+    "btcUsdRate": 3,
     "date": 2022-01-01T00:00:00.000Z,
-    "usdEurRate": 0.8,
+    "usdEurRate": 3,
   },
   {
-    "acquiredSatoshis": 357143,
+    "acquiredSatoshis": 625000000,
     "amountInEur": 100,
-    "btcUsdRate": 40000,
+    "btcUsdRate": 4,
     "date": 2023-01-01T00:00:00.000Z,
-    "usdEurRate": 0.7,
+    "usdEurRate": 4,
   },
 ]
 `;

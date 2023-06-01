@@ -1,9 +1,9 @@
+import { calculateSatsFromEur } from "./calculateSatsFromEur";
 import {
   ExchangeRateType,
   IBuildPurchaseParams,
   IPurchase,
-} from "../interfaces";
-import { calculateSatsFromEur } from "./calculateSatsFromEur";
+} from "./interfaces";
 
 export async function buildPurchaseList(
   params: IBuildPurchaseParams

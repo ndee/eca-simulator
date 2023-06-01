@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@bg-eca-simulator/calculator": ["packages/calculator/src"],
+      "@bg-eca-simulator/calculator": ["./packages/calculator/src"],
+      "@bg-eca-simulator/rate-crawler": ["./packages/rate-crawler/src"],
     }
   }
 }

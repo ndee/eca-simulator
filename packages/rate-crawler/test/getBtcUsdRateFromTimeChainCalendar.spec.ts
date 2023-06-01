@@ -1,4 +1,4 @@
-import { getBtcUsdRateFromTimeChainCalendar } from "../../src/exchangeRateProvider/getBtcUsdRateFromTimeChainCalendar";
+import { getBtcUsdRateFromTimeChainCalendar } from "../src/getBtcUsdRateFromTimeChainCalendar";
 
 describe("getBtcRateFromTimeChainCalendar", () => {
   it("should return the correct BTC rate in USD for a certain day", async () => {

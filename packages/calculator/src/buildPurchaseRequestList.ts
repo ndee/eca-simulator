@@ -1,5 +1,5 @@
 import moment from "moment";
-import { IEcaPurchase, IPurchaseRequest, PurchaseRepeat } from "../interfaces";
+import { IEcaPurchase, IPurchaseRequest, PurchaseRepeat } from "./interfaces";
 
 export function buildPurchaseRequestList(
   ecaPurchase: IEcaPurchase
